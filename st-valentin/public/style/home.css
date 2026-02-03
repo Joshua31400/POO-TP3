@@ -1,0 +1,59 @@
+/**
+ * home.css
+ * Styles spécifiques à la page d'accueil
+ */
+
+/* ─── Layout ─── */
+body {
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ─── Spline Viewer ─── */
+spline-viewer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+/* ─── Formulaire Valentine ─── */
+.form {
+    z-index: 1;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: 20px;
+    transition: all var(--transition-base);
+    border: 1px solid var(--border-card);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+}
+
+.form:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+/* ─── Titre ─── */
+.title h1 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* ─── Boutons de question ─── */
+.question {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}

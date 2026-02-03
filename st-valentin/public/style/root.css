@@ -1,0 +1,112 @@
+/**
+ * root.css
+ * Variables CSS globales et reset de base
+ * Ce fichier doit être importé en premier dans toutes les pages
+ */
+
+/* Optimisation: preconnect pour les fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ═══════════════════════════════════════════════════
+   VARIABLES CSS - Design Tokens
+   ═══════════════════════════════════════════════════ */
+
+:root {
+    /* ─── Couleurs de texte ─── */
+    --text-primary: #1A1423;
+    --text-secondary: #6B5B7A;
+    --text-light: #FAF7FC;
+    --text-link: #D4508A;
+
+    /* ─── Couleurs de fond ─── */
+    --bg-body: #FDF2F8;
+    --bg-card: #FFFFFF;
+    --bg-header: rgba(255, 255, 255, 0.85);
+    --bg-footer: #1A1423;
+
+    /* ─── Boutons ─── */
+    --btn-primary: linear-gradient(135deg, #E8567A 0%, #D4508A 50%, #B8428C 100%);
+    --btn-primary-hover: linear-gradient(135deg, #D4508A 0%, #B8428C 50%, #9C3A7E 100%);
+    --btn-text: #FFFFFF;
+    --btn-radius: 34px;
+    --btn-padding: 12px 24px;
+
+    /* ─── Bordures ─── */
+    --border-light: rgba(212, 80, 138, 0.15);
+    --border-hover: rgba(212, 80, 138, 0.4);
+    --border-card: rgba(26, 20, 35, 0.06);
+
+    /* ─── Accents ─── */
+    --accent-primary: #D4508A;
+    --accent-soft: #F2D4E0;
+    --accent-gold: #C9A227;
+    --accent-glow: rgba(212, 80, 138, 0.25);
+
+    /* ─── Ombres ─── */
+    --shadow-card: 0 4px 24px rgba(26, 20, 35, 0.08), 0 1px 3px rgba(26, 20, 35, 0.04);
+    --shadow-hover: 0 12px 40px rgba(212, 80, 138, 0.2), 0 4px 12px rgba(26, 20, 35, 0.08);
+    --shadow-btn: 0 4px 16px rgba(212, 80, 138, 0.35);
+
+    /* ─── Espacements ─── */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+
+    /* ─── Transitions ─── */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-body);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    min-height: 80vh;
+}
+
+/* ─── Accessibilité: focus visible ─── */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* ─── Réduction des animations si préférence utilisateur ─── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

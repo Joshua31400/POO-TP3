@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Générateur de mots d'amour - Des messages romantiques pour ta Valentine">
+    <meta name="theme-color" content="#D4508A">
+    <title>Saint-Valentin | Mots d'amour</title>
+
+    <link rel="stylesheet" href="../style/root.css">
+    <link rel="stylesheet" href="../style/components.css">
+    <link rel="stylesheet" href="../style/love.css">
+
+    <script type="module" src="../scripts/love.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.48/build/spline-viewer.js"></script>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Navigation principale">
+            <ul role="list">
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="galery.html">Galerie</a></li>
+                <li><a href="love.html" aria-current="page">Amour</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <spline-viewer
+            url="https://prod.spline.design/etxi0fb-HCA43aXN/scene.splinecode"
+            aria-hidden="true">
+        </spline-viewer>
+
+        <div class="container">
+            <div class="love-generator" role="region" aria-labelledby="love-title">
+                <h1 id="love-title">Générateur de mots d'amour</h1>
+                <p id="love-message" role="status" aria-live="polite">
+                    Clique sur le bouton pour recevoir un mot doux 💌
+                </p>
+                <button
+                    type="button"
+                    class="button"
+                    id="generate-love"
+                    aria-label="Générer un nouveau message d'amour">
+                    Nouveau mot d'amour
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <div class="background-gradient" aria-hidden="true"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/**
+ * galery.css
+ * Styles spécifiques à la page Galerie
+ */
+
+/* ─── Grille de la galerie ─── */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 12vw);
+    gap: 1.2vw;
+    padding: 2vw;
+}
+
+/* ─── Items de la galerie ─── */
+.gallery-item {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-item:focus-within {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* ─── Images ─── */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-base);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+/* ─── Positions des items dans la grille ─── */
+.item1 { grid-area: 1 / 1 / 3 / 3; }
+.item2 { grid-area: 1 / 3 / 4 / 5; }
+.item3 { grid-area: 1 / 5 / 4 / 7; }
+.item4 { grid-area: 3 / 1 / 7 / 4; }
+.item5 { grid-area: 4 / 4 / 7 / 6; }
+.item6 { grid-area: 4 / 6 / 7 / 7; }

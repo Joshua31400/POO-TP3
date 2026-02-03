@@ -1,0 +1,94 @@
+/**
+ * love.css
+ * Styles spécifiques à la page Love
+ */
+
+/* ─── Layout ─── */
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ─── Spline Viewer ─── */
+spline-viewer {
+    margin: 10rem 10rem 10rem -50rem;
+    position: absolute;
+    z-index: 1;
+}
+
+/* ─── Générateur d'amour ─── */
+.love-generator {
+    position: relative;
+    top: -5rem;
+    z-index: 2;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: 20px;
+    transition: all var(--transition-base);
+    border: 1px solid var(--border-card);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+}
+
+.love-generator:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+/* ─── Titre ─── */
+.love-generator h1 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* ─── Message ─── */
+#love-message {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* ─── Bouton animé ─── */
+.button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    background: transparent !important;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    box-shadow: var(--shadow-btn);
+    border-radius: var(--btn-radius);
+    border: 2px solid var(--border-light);
+    color: var(--text-primary);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background: var(--accent-primary);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+    scale: 5;
+}
+
+.button:hover {
+    scale: 1.1;
+    box-shadow: var(--shadow-hover);
+    color: var(--btn-text);
+}
